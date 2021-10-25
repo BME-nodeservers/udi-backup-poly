@@ -23,15 +23,8 @@
 		"developer": "bpaauwe@bobsplace.com",
 		"purchaseOptions": [
 			{
-				"price": 1.00,
-				"recurring": 1,
-				"recurringPeriod": "month"
-			},
-			{
 				"price": 0,
-				"isTrial": true,
-				"recurring": 30,
-				"recurringPeriod": "day"
+				"isPerpetual": true
 			}
 		]
 	}
