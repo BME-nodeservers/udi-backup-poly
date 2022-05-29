@@ -118,9 +118,9 @@ class Controller(udi_interface.Node):
         LOGGER.debug('getting custom data to restore: ' + str(command))
         for address in self.CustomData.keys():
             if self.CustomData[address]['value'] == '0':
-                cmd = '/rest/nodes/' + address + '/cmd/DOF'
+                cmd = '/rest/nodes/' + str(address) + '/cmd/DOF'
             else:
-                cmd = '/rest/nodes/' + address + '/cmd/DON/' + self.CustomData[address]['value']
+                cmd = '/rest/nodes/' + str(address) + '/cmd/DON/' + str(self.CustomData[address]['value'])
             LOGGER.info('Calling ' + cmd)
 
             self.ISY.cmd(cmd)
